@@ -43,11 +43,11 @@ footer {
 }
 
 .hero {
-  padding: 4rem 0 2rem;
+  padding: 0.35rem 0 2rem;
 }
 
 .hero__inner {
-  padding: 2rem 0 2.5rem;
+  padding: 0.75rem 0 1rem;
   border-bottom: 2px solid var(--line);
 }
 
@@ -61,7 +61,7 @@ footer {
 
 h1 {
   margin: 0;
-  font-size: clamp(2.8rem, 7vw, 5.8rem);
+  font-size: clamp(2.2rem, 4.8vw, 4rem);
   line-height: 0.95;
   text-transform: uppercase;
   letter-spacing: 0.04em;
@@ -79,7 +79,7 @@ main {
 }
 
 .panel {
-  margin-top: 2rem;
+  margin-top: 0.35rem;
   padding: 1.5rem;
   background: rgba(251, 248, 239, 0.78);
   border: 1px solid var(--line);
@@ -173,7 +173,7 @@ footer {
 
 @media (max-width: 640px) {
   .hero {
-    padding-top: 2.5rem;
+    padding-top: 0.25rem;
   }
 
   .hero__inner,
