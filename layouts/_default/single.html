@@ -5,8 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ .Title }} - HAM Závod</title>
     <meta name="description" content="HAM Závod - {{ .Title }}">
-    <link rel="stylesheet" href="/style.css">
-    <script src="/copy-code.js" defer></script>
+    <link rel="stylesheet" href="{{ "style.css" | relURL }}">
 </head>
 <body>
     <header>
@@ -16,7 +15,7 @@
     
     <nav>
         <ul>
-            <li><a href="/">Domů</a></li>
+            <li><a href="{{ "" | relURL }}">Domů</a></li>
             <li><a href="#obsah">Obsah</a></li>
         </ul>
     </nav>
