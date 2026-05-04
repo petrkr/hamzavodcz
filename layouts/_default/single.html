@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ .Title }} - HAM Závod</title>
+    <meta name="description" content="HAM Závod - {{ .Title }}">
+    <link rel="stylesheet" href="/style.css">
+    <script src="/copy-code.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>{{ .Title }}</h1>
+        <div class="subtitle">HAMZAVOD.cz</div>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="/">Domů</a></li>
+            <li><a href="#obsah">Obsah</a></li>
+        </ul>
+    </nav>
+    
+    <main>
+        {{ .Content }}
+    </main>
+    
+    <footer>
+        <p>&copy; 2026 HAMZAVOD.cz - Česká amatérská rádiová komunita</p>
+        <p class="text-muted">Pro radioamatéry, od radioamatérů</p>
+    </footer>
+</body>
+</html>

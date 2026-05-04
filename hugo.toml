@@ -1,0 +1,8 @@
+baseURL = 'https://hamzavod.cz/'
+title = 'HAM Závod'
+defaultContentLanguage = 'cs'
+disableKinds = ["taxonomy"]
+
+[languages.cs]
+label = 'Cestina'
+locale = 'cs-CZ'
