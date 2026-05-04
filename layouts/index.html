@@ -21,44 +21,7 @@
     <main>
         <section class="panel">
             <h2>Závody</h2>
-            <div class="cards">
-                <a class="card card--image" href="https://digi.hamzavod.cz">
-                    <strong>DIGI závod</strong>
-                    <img
-                        src="https://digi.hamzavod.cz/wp-content/uploads/2024/01/IMG_20231117_165721-2048x977.jpg"
-                        alt="DIGI závod"
-                    >
-                </a>
-
-                <a class="card card--image" href="https://ok1kbt.fbmi.cvut.cz/mikulassky-zavod/">
-                    <strong>Mikulášský závod</strong>
-                    <img
-                        src="https://ok1kbt.fbmi.cvut.cz/wp-content/uploads/2024/11/CQ-Mikulas-768x768.jpg"
-                        alt="Mikulášský závod"
-                    >
-                </a>
-
-                <a class="card card--image" href="http://ok1srd.hrnek.cz/carodej/index.htm">
-                    <strong>Čarodějnický závod</strong>
-                    <img
-                        src="http://ok1srd.hrnek.cz/images/witch.jpg"
-                        alt="Čarodějnický závod"
-                    >
-                </a>
-
-                <a class="card" href="https://nedtest.cz/">
-                    <strong>Nedělní závod</strong>
-                    <span>nedtest.cz</span>
-                </a>
-
-                <a class="card card--image" href="https://ok2vbz.waypoint.cz/mc/">
-                    <strong>Moon Contest</strong>
-                    <img
-                        src="https://ok2vbz.waypoint.cz/mc/images/cmc_logo.gif"
-                        alt="Moon Contest"
-                    >
-                </a>
-            </div>
+            <div id="contests" class="cards"></div>
         </section>
 
         <section class="panel panel--muted">
@@ -75,5 +38,54 @@
     <footer>
         <p>&copy; 2026 HAM Závod · <a href="https://github.com/petrkr/hamzavodcz">GitHub</a></p>
     </footer>
+    <script>
+        async function loadContests() {
+            const container = document.getElementById("contests");
+            if (!container) {
+                return;
+            }
+
+            try {
+                const response = await fetch("{{ "contests/contests.json" | relURL }}");
+                if (!response.ok) {
+                    throw new Error("Failed to load contests");
+                }
+
+                const contests = await response.json();
+                const fragment = document.createDocumentFragment();
+
+                for (const contest of contests) {
+                    const link = document.createElement("a");
+                    link.className = contest.image ? "card card--image" : "card";
+                    link.href = contest.url;
+
+                    const title = document.createElement("strong");
+                    title.textContent = contest.name;
+                    link.appendChild(title);
+
+                    if (contest.image) {
+                        const image = document.createElement("img");
+                        image.src = contest.image;
+                        image.alt = contest.name;
+                        link.appendChild(image);
+                    } else {
+                        const meta = document.createElement("span");
+                        meta.textContent = contest.url
+                            .replace(/^https?:\/\//, "")
+                            .replace(/\/$/, "");
+                        link.appendChild(meta);
+                    }
+
+                    fragment.appendChild(link);
+                }
+
+                container.replaceChildren(fragment);
+            } catch (error) {
+                console.error(error);
+            }
+        }
+
+        loadContests();
+    </script>
 </body>
 </html>

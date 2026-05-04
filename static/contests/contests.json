@@ -1,0 +1,31 @@
+[
+  {
+    "id": "digi-zavod",
+    "name": "DIGI závod",
+    "url": "https://digi.hamzavod.cz",
+    "image": "https://digi.hamzavod.cz/wp-content/uploads/2024/01/IMG_20231117_165721-2048x977.jpg"
+  },
+  {
+    "id": "mikulassky-zavod",
+    "name": "Mikulášský závod",
+    "url": "https://ok1kbt.fbmi.cvut.cz/mikulassky-zavod/",
+    "image": "https://ok1kbt.fbmi.cvut.cz/wp-content/uploads/2024/11/CQ-Mikulas-768x768.jpg"
+  },
+  {
+    "id": "carodejnicky-zavod",
+    "name": "Čarodějnický závod",
+    "url": "http://ok1srd.hrnek.cz/carodej/index.htm",
+    "image": "http://ok1srd.hrnek.cz/images/witch.jpg"
+  },
+  {
+    "id": "nedelni-zavod",
+    "name": "Nedělní závod",
+    "url": "https://nedtest.cz/"
+  },
+  {
+    "id": "moon-contest",
+    "name": "Moon Contest",
+    "url": "https://ok2vbz.waypoint.cz/mc/",
+    "image": "https://ok2vbz.waypoint.cz/mc/images/cmc_logo.gif"
+  }
+]
