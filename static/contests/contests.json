@@ -1,11 +1,5 @@
 [
   {
-    "id": "digi-zavod",
-    "name": "DIGI závod",
-    "url": "https://digi.hamzavod.cz",
-    "image": "https://digi.hamzavod.cz/wp-content/uploads/2024/01/IMG_20231117_165721-2048x977.jpg"
-  },
-  {
     "id": "mikulassky-zavod",
     "name": "Mikulášský závod",
     "url": "https://ok1kbt.fbmi.cvut.cz/mikulassky-zavod/",
